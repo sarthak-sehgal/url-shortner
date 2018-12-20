@@ -1,9 +1,6 @@
 function init() {
     document.addEventListener("DOMContentLoaded", function () {
-        const URL = "https://url-shortner-99.herokuapp.com/shorten"
-        let input = document.getElementById("urlInput");
         let shortenBtn = document.getElementById("shortenBtn");
-        let alert = document.getElementById("alerts");
 
         document.addEventListener("keyup", function (e) {
             if (e.keyCode === 13) {
@@ -20,7 +17,7 @@ function init() {
     })
 
     function shorten() {
-        const URL = "http://localhost:8000/shorten";
+        const URL = "https://url-shortner-99.herokuapp.com/shorten";
         let input = document.getElementById("urlInput");
         let alert = document.getElementById("alerts");
         console.log("Button clicked");
