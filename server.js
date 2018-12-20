@@ -73,7 +73,6 @@ app.post('/shorten', (req, response) => {
                                 res.status(301).redirect(data.url);
                             })
                         }
-                        mongoose.disconnect();
                     })
                 }
 
