@@ -8,7 +8,7 @@ const validateURL = require('url-validate');
 const app = express();
 app.use(bodyParser.json());
 
-const BASE_URL = "http://localhost:5000/"
+const BASE_URL = "https://url-shortner-99.herokuapp.com/";
 
 // Connection URL
 const dbUrl = 'mongodb://admin:password123@ds139934.mlab.com:39934';
