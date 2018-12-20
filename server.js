@@ -36,7 +36,12 @@ db.once('open', function () {
         else {
             res.map(obj => {
                 app.get("/" + obj.shortened, (req, res) => {
-                    res.status(301).redirect(obj.url);
+                    var prefix = 'https://';
+                    let s = obj.url;
+                    if (s.substr(0, prefix.length) !== prefix) {
+                        s = prefix + s;
+                    }
+                    res.status(301).redirect(s);
                 })
             })
         }
@@ -72,8 +77,13 @@ app.post('/shorten', (req, response) => {
                             response.send(JSON.stringify({ 'status': 0, 'message': err }))
                         else {
                             response.send(JSON.stringify({ "status": 1, 'message': BASE_URL + string }))
+                            var prefix = 'https://';
+                            let s = data.url;
+                            if (s.substr(0, prefix.length) !== prefix) {
+                                s = prefix + s;
+                            }
                             app.get("/" + string, (req, res) => {
-                                res.status(301).redirect(data.url);
+                                res.status(301).redirect(s);
                             })
                         }
                     })
