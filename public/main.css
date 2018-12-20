@@ -48,6 +48,19 @@ input {
     text-align: center;
 }
 
+#author {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+    width: 90%;
+}
+
+#author a {
+    text-decoration: underline;
+    color: inherit;
+}
+
 @media all and (max-width: 600px) and (orientation: portrait) {
     h1 {
         font-size: 2.5em;

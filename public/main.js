@@ -21,7 +21,7 @@ function init() {
         let input = document.getElementById("urlInput");
         let alert = document.getElementById("alerts");
         console.log("Button clicked");
-        alert.innerHTML = '';
+        alert.innerHTML = '<div class="alert alert-warning" role="alert">Shortening</div>';
         shortenBtn.disabled = true;
         fetch(URL, {
             method: "POST",
