@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 const BASE_URL = "http://localhost:8000/"
 
 // Connection URL
-const dbUrl = 'mongodb://localhost:27017';
+const dbUrl = 'mongodb://admin:password123@ds139934.mlab.com:39934';
 
 // Database Name
 const dbName = 'urlshortner';
@@ -92,4 +92,4 @@ app.post('/shorten', (req, response) => {
     }
 });
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
