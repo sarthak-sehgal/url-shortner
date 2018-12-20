@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 mongoose.set('debug', true);
 const randomstring = require('randomstring');
 const validateURL = require('url-validate');
+const path = require("path");
 
 const app = express();
 app.use(bodyParser.json());
+
+app.use(express.static('public'));
 
 const BASE_URL = "https://url-shortner-99.herokuapp.com/";
 
@@ -44,9 +47,9 @@ app.post('/shorten', (req, response) => {
     console.log("Request /shorten received");
     response.setHeader('Content-Type', 'application/json');
     let data = req.body;
-    if (data.url) {
+    if (data.url.trim()) {
         console.log("URL present in request body");
-        if (validateURL(data.url)) {
+        if (validateURL(data.url.trim())) {
             console.log("Validated URL");
             url.find({}, (err, res) => {
                 console.log("URL find running")
