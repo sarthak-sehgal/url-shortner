@@ -8,7 +8,7 @@ const validateURL = require('url-validate');
 const app = express();
 app.use(bodyParser.json());
 
-const BASE_URL = "http://localhost:8000/"
+const BASE_URL = "http://localhost:5000/"
 
 // Connection URL
 const dbUrl = 'mongodb://admin:password123@ds139934.mlab.com:39934';

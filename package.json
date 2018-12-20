@@ -1,0 +1,33 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "A URL shortner made using NodeJS.",
+  "main": "server.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.0",
+    "randomstring": "^1.1.5",
+    "url-validate": "^1.0.1"
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthak-sehgal/url-shortner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarthak-sehgal/url-shortner/issues"
+  },
+  "homepage": "https://github.com/sarthak-sehgal/url-shortner#readme"
+}
