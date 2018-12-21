@@ -20,3 +20,10 @@ URL shortner made using NodeJS and MongoDB served over Heroku at <a href="https:
 
 #### In public/main.js
  - Change URL to "http://localhost:8000/shorten"
+
+#### Create a .env file
+```
+PORT = 8081
+export DB_USERNAME="your_db_user_username"
+export DB_PASSWORD="your_db_user_password"
+```

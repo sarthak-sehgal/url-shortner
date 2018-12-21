@@ -12,7 +12,9 @@ app.use(express.static('public'));
 const BASE_URL = "https://url-shortner-99.herokuapp.com/";
 
 // Connection URL
-const dbUrl = 'mongodb://admin:password123@ds139934.mlab.com:39934';
+const dbUsername = process.env.DB_USERNAME;
+const dbPass = process.env.DB_PASSWORD;
+const dbUrl = `mongodb://${dbUsername}:${dbPass}@ds139934.mlab.com:39934`;
 
 // Database Name
 const dbName = 'urlshortner';
