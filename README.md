@@ -24,6 +24,6 @@ URL shortner made using NodeJS and MongoDB served over Heroku at <a href="https:
 #### Create a .env file
 ```
 PORT = 8081
-export DB_USERNAME="your_db_user_username"
-export DB_PASSWORD="your_db_user_password"
+DB_USERNAME="your_db_user_username"
+DB_PASSWORD="your_db_user_password"
 ```
